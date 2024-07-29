@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Button</title>
+    <style>
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        p{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <button onclick="increment()">Click Here</button>
+    <button onclick="decrement()">Click Here</button>
+    </div>
+    <h1><p id="mybutton">0</p></h1>
+   
+
+    <script>
+        let count = 0;
+        function increment() {
+            count++;
+            document.getElementById('mybutton').textContent = count;
+        }
+
+
+        function decrement() {
+            if (count > 0) {
+                count--;
+                document.getElementById('mybutton').textContent = count;
+            }
+        }
+    </script>
+</body>
+
+</html>
